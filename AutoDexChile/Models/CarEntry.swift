@@ -20,8 +20,6 @@ struct CarEntry: Identifiable, Codable, Equatable {
     var rarity: String
     var points: Int
     var isFavorite: Bool
-    var photoCarPath: String?
-    var photoPlatePath: String?
     var sourceType: SourceType
     let createdAt: Date
     var updatedAt: Date
@@ -39,8 +37,6 @@ struct CarEntry: Identifiable, Codable, Equatable {
         rarity: String,
         points: Int,
         isFavorite: Bool = false,
-        photoCarPath: String? = nil,
-        photoPlatePath: String? = nil,
         sourceType: SourceType = .manual,
         createdAt: Date = Date(),
         updatedAt: Date = Date()
@@ -57,8 +53,6 @@ struct CarEntry: Identifiable, Codable, Equatable {
         self.rarity = rarity
         self.points = points
         self.isFavorite = isFavorite
-        self.photoCarPath = photoCarPath
-        self.photoPlatePath = photoPlatePath
         self.sourceType = sourceType
         self.createdAt = createdAt
         self.updatedAt = updatedAt

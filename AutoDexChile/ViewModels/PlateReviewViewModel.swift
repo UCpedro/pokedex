@@ -3,27 +3,17 @@ import Foundation
 /// ViewModel para revisar/corregir patente detectada por OCR.
 @MainActor
 final class PlateReviewViewModel: ObservableObject {
-    @Published var draft: ScanDraft
+    let rawText: String
     let candidatePlates: [String]
 
+    @Published var normalizedFromOCR: String
     @Published var editablePlate: String
 
-    init(result: OCRResult, draft: ScanDraft) {
-        var updatedDraft = draft
-        updatedDraft.plateRawText = result.rawText
-        updatedDraft.normalizedPlate = result.normalizedPlate
-
-        self.draft = updatedDraft
-        self.candidatePlates = result.candidatePlates
-        self.editablePlate = result.normalizedPlate
-    }
-
-    var rawText: String {
-        draft.plateRawText
-    }
-
-    var normalizedFromOCR: String {
-        draft.normalizedPlate
+    init(result: OCRResult) {
+        rawText = result.rawText
+        candidatePlates = result.candidatePlates
+        normalizedFromOCR = result.normalizedPlate
+        editablePlate = result.normalizedPlate
     }
 
     var normalizedEditablePlate: String {
@@ -36,11 +26,5 @@ final class PlateReviewViewModel: ObservableObject {
 
     func applyCandidate(_ plate: String) {
         editablePlate = plate
-    }
-
-    func confirmedDraft() -> ScanDraft {
-        var updated = draft
-        updated.normalizedPlate = normalizedEditablePlate
-        return updated
     }
 }

@@ -1,47 +1,25 @@
 import SwiftUI
 
-/// Pantalla de ingreso/edición manual final antes de guardar la ficha.
+/// Pantalla de ingreso manual para crear una ficha inicial de auto.
 struct ManualEntryView: View {
     @EnvironmentObject private var repository: InventoryRepository
 
-    private let draft: ScanDraft
-
     @State private var plate: String
-    @State private var brand: String
-    @State private var model: String
-    @State private var year: String
-    @State private var version: String
-    @State private var vehicleType: String
-    @State private var color: String
-    @State private var notes: String
+    @State private var brand: String = ""
+    @State private var model: String = ""
+    @State private var year: String = ""
+    @State private var version: String = ""
+    @State private var vehicleType: String = ""
+    @State private var color: String = ""
+    @State private var notes: String = ""
 
     @State private var showValidation = false
     @State private var goToCollection = false
 
     private let rarityService = RarityService()
 
-    init(draft: ScanDraft) {
-        self.draft = draft
-        let lookup = draft.lookupResult
-
-        _plate = State(initialValue: draft.normalizedPlate)
-        _brand = State(initialValue: lookup?.brand ?? "")
-        _model = State(initialValue: lookup?.model ?? "")
-        _year = State(initialValue: lookup?.year.map(String.init) ?? "")
-        _version = State(initialValue: lookup?.version ?? "")
-        _vehicleType = State(initialValue: lookup?.vehicleType ?? "")
-        _color = State(initialValue: lookup?.color ?? "")
-        _notes = State(initialValue: lookup?.notes ?? "")
-    }
-
     init(prefilledPlate: String) {
-        self.init(draft: ScanDraft(
-            plateRawText: "",
-            normalizedPlate: prefilledPlate,
-            carImagePath: nil,
-            plateImagePath: nil,
-            lookupResult: nil
-        ))
+        _plate = State(initialValue: prefilledPlate)
     }
 
     private var normalizedPlate: String {
@@ -59,7 +37,7 @@ struct ManualEntryView: View {
     }
 
     private var formIsValid: Bool {
-        !normalizedPlate.isEmpty && ChilePlateValidator.isValid(normalizedPlate) && !brand.trimmed.isEmpty && !model.trimmed.isEmpty && yearIsValid
+        !normalizedPlate.isEmpty && ChilePlateValidator.isValid(normalizedPlate) && !brand.trimmingCharacters(in: .whitespaces).isEmpty && !model.trimmingCharacters(in: .whitespaces).isEmpty && yearIsValid
     }
 
     var body: some View {
@@ -87,14 +65,6 @@ struct ManualEntryView: View {
                     .lineLimit(2...5)
             }
 
-            Section("Fotos") {
-                Label(draft.carImagePath == nil ? "Sin foto de auto" : "Foto de auto adjunta", systemImage: draft.carImagePath == nil ? "xmark.circle" : "checkmark.circle.fill")
-                    .foregroundStyle(draft.carImagePath == nil ? .secondary : .green)
-
-                Label(draft.plateImagePath == nil ? "Sin foto de patente" : "Foto de patente adjunta", systemImage: draft.plateImagePath == nil ? "xmark.circle" : "checkmark.circle.fill")
-                    .foregroundStyle(draft.plateImagePath == nil ? .secondary : .green)
-            }
-
             if showValidation && !formIsValid {
                 Section {
                     VStack(alignment: .leading, spacing: 4) {
@@ -115,7 +85,7 @@ struct ManualEntryView: View {
                 }
             }
         }
-        .navigationTitle("Completar ficha")
+        .navigationTitle("Ingreso manual")
         .navigationDestination(isPresented: $goToCollection) {
             CollectionView()
         }
@@ -130,13 +100,10 @@ struct ManualEntryView: View {
         let computedRarity = rarityService.rarity(forBrand: brand, model: model)
         let computedPoints = rarityService.points(for: computedRarity)
 
-        let finalCarPath = draft.carImagePath.map(ImageStorageHelper.copyImageToDocumentsIfNeeded)
-        let finalPlatePath = draft.plateImagePath.map(ImageStorageHelper.copyImageToDocumentsIfNeeded)
-
         let newEntry = CarEntry(
             plate: normalizedPlate,
-            brand: brand.trimmed,
-            model: model.trimmed,
+            brand: brand.trimmingCharacters(in: .whitespacesAndNewlines),
+            model: model.trimmingCharacters(in: .whitespacesAndNewlines),
             year: parsedYear,
             version: version.nilIfBlank,
             vehicleType: vehicleType.nilIfBlank,
@@ -145,9 +112,7 @@ struct ManualEntryView: View {
             rarity: computedRarity,
             points: computedPoints,
             isFavorite: false,
-            photoCarPath: finalCarPath,
-            photoPlatePath: finalPlatePath,
-            sourceType: draft.lookupResult == nil ? .manual : .web
+            sourceType: .manual
         )
 
         repository.save(newEntry)
@@ -156,13 +121,9 @@ struct ManualEntryView: View {
 }
 
 private extension String {
-    var trimmed: String {
-        trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-
     var nilIfBlank: String? {
-        let value = trimmed
-        return value.isEmpty ? nil : value
+        let trimmed = trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 }
 

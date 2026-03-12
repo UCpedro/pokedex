@@ -35,11 +35,6 @@ struct CarDetailView: View {
                         detailRow("Favorito", value: entry.isFavorite ? "Sí" : "No")
                     }
 
-                    Section("Fotos") {
-                        detailRow("Foto auto", value: entry.photoCarPath)
-                        detailRow("Foto patente", value: entry.photoPlatePath)
-                    }
-
                     Section("Fechas") {
                         detailRow("Creado", value: entry.createdAt.formatted(date: .abbreviated, time: .shortened))
                         detailRow("Actualizado", value: entry.updatedAt.formatted(date: .abbreviated, time: .shortened))

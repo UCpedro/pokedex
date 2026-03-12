@@ -1,9 +1,10 @@
 import SwiftUI
 
-/// Vista de revisión OCR antes de intentar lookup automático.
+/// Vista de revisión de resultado OCR y edición manual de patente.
 struct PlateReviewView: View {
     @StateObject var viewModel: PlateReviewViewModel
-    @State private var goToLookup = false
+
+    @State private var goToManualEntry = false
 
     var body: some View {
         Form {
@@ -20,7 +21,9 @@ struct PlateReviewView: View {
             if !viewModel.candidatePlates.isEmpty {
                 Section("Candidatas detectadas") {
                     ForEach(viewModel.candidatePlates, id: \.self) { plate in
-                        Button(plate) { viewModel.applyCandidate(plate) }
+                        Button(plate) {
+                            viewModel.applyCandidate(plate)
+                        }
                     }
                 }
             }
@@ -44,15 +47,15 @@ struct PlateReviewView: View {
             }
 
             Section {
-                Button("Continuar y buscar datos") {
-                    goToLookup = true
+                Button("Continuar") {
+                    goToManualEntry = true
                 }
                 .disabled(viewModel.normalizedEditablePlate.isEmpty)
             }
         }
         .navigationTitle("Revisar patente")
-        .navigationDestination(isPresented: $goToLookup) {
-            LookupResultView(viewModel: LookupResultViewModel(draft: viewModel.confirmedDraft()))
+        .navigationDestination(isPresented: $goToManualEntry) {
+            ManualEntryView(prefilledPlate: viewModel.normalizedEditablePlate)
         }
     }
 }
@@ -66,8 +69,7 @@ struct PlateReviewView: View {
                     normalizedPlate: "ABCD12",
                     isValidPlate: true,
                     candidatePlates: ["ABCD12"]
-                ),
-                draft: .empty
+                )
             )
         )
     }

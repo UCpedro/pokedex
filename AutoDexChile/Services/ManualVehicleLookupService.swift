@@ -1,9 +1,9 @@
 import Foundation
 
 /// Servicio stub para búsqueda manual/local de vehículos.
-/// Devuelve notFound para forzar fallback manual en esta etapa.
+/// TODO: Implementar reglas manuales o base local según necesidad.
 final class ManualVehicleLookupService: VehicleLookupProviding {
     func lookupVehicle(by plate: String) async throws -> VehicleLookupResult {
-        throw VehicleLookupError.notFound
+        VehicleLookupResult(plate: plate, brand: "", model: "", year: nil, color: nil)
     }
 }
