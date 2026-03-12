@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D8829CA9814F4467CCAEBBB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CB29BD4302054A52FAE18 /* AppRouter.swift */; };
+		37088026487015FEC8E43673 /* AutoDexChileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF09A305956E3C2025D5CD76 /* AutoDexChileApp.swift */; };
+		A5BE04B633CC85A463508062 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25400ABEB618C2C9C92FBF96 /* Achievement.swift */; };
+		0163EC906F7B7AB41E5D14F5 /* AppStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2DCDE7BEDACF20D259EA41 /* AppStats.swift */; };
+		655422705FDC1289E8F07399 /* CarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BA96C551C358EF0C3CEC8 /* CarEntry.swift */; };
+		3264DB44194EB5CA28130706 /* OCRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7770414E2AAA578CC0A30 /* OCRResult.swift */; };
+		AFE3F1D4E69A6E549C6E6FDD /* ScanDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93324CAD31E11C3794AE35F4 /* ScanDraft.swift */; };
+		6650DFD645E591E75DE57FD3 /* VehicleLookupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09C70E8AEFF459F823D8C3 /* VehicleLookupResult.swift */; };
+		0CCCEB206681F64EA69A97B3 /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AA16D140D23D94C6532ADC /* InventoryRepository.swift */; };
+		F056289D0186D16C4FEE4B62 /* AchievementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B60DDAE9983E7736D0132 /* AchievementService.swift */; };
+		D79D513272C31B3FFF470EE7 /* ManualVehicleLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E9DCB7C7963613E0E22DC /* ManualVehicleLookupService.swift */; };
+		EE153213C3B1942305280CBD /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E630E7B1CC3D7A7EFF977554 /* OCRService.swift */; };
+		AAB6BC2B4B86278F59CDBB64 /* RarityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2D98CA6A94EDC466FF204 /* RarityService.swift */; };
+		CD6072AF0EFD75F8C1E8F9DF /* VehicleLookupProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE36DE53D53880F5B0A72F /* VehicleLookupProviding.swift */; };
+		A15BDA92309B572D4FDF3DC4 /* WebVehicleLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEE090F4E77BFD64DB9DAB6 /* WebVehicleLookupService.swift */; };
+		233736D6105D635B8BCDE879 /* ChilePlateNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2D01DA4485B8201CCEF656 /* ChilePlateNormalizer.swift */; };
+		054BDAE0E62A44BDB63A1972 /* ChilePlateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8B7AF1F0BDE826612EE25 /* ChilePlateValidator.swift */; };
+		F3B9166D6E267B8372FF8606 /* ImageStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2D2F512B3167D9C339568 /* ImageStorageHelper.swift */; };
+		D1FEB8F5DF7DE09CE276BF56 /* CarDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB46425F8BC84DA7250E7C6 /* CarDetailViewModel.swift */; };
+		1BA1CD3C0C5CC97EE46533F2 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD251386A06AAD4900F493A /* CollectionViewModel.swift */; };
+		E62FF235706BE30C750F1205 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CBDDEF909E5791FB88C781 /* HomeViewModel.swift */; };
+		83559B0C3AE5826F191419A1 /* LookupResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7456ABFF24225EB52A8CDDEF /* LookupResultViewModel.swift */; };
+		29AD0C1C9CAAFA7B45DFC30B /* PlateReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B8ABE660EF289A84BE22B /* PlateReviewViewModel.swift */; };
+		6D19BDA565110848A41E5D29 /* ScanFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FDF9AA22212C4F6C814495 /* ScanFlowViewModel.swift */; };
+		7B7E5F5205BDE8C3C433935F /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF1246A1A6B7FC9DD90315 /* StatsViewModel.swift */; };
+		3EB703BA6C3E3B687E702087 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9167AA5C641CE37BFEA88450 /* CarDetailView.swift */; };
+		7756C3681C4CBC12FCF3C140 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E270F7D8B6EEE15ED7E279A6 /* CollectionView.swift */; };
+		3712339A6E6B652EFD847D3F /* CarCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6F3F99E6F47D5B44CDA57 /* CarCardView.swift */; };
+		52C159E9FC198BA737ED3B76 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B9001A42D1EFEBF28FAF73 /* ImagePickerView.swift */; };
+		D8FEAFD16E92AAC986D3C2AD /* EditCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C8FFBB640F7D563AEE23A /* EditCarView.swift */; };
+		3D225D765AFFA2B599A7DD24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8D8AE8B0DA9986A802FD5C /* HomeView.swift */; };
+		9B3D58AE73D0CEFD3ADE18B4 /* LookupResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B84E0494383871A053893B9 /* LookupResultView.swift */; };
+		7BC07C44A712BF217724E0F7 /* ManualEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE11A61AC9F5E39E521EB46 /* ManualEntryView.swift */; };
+		9271869BCB6303D15E47A96D /* PlateReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BE044C6CDC7398263E1969 /* PlateReviewView.swift */; };
+		DE4E597CA1D44E07114081C9 /* ScanFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91583A1774B9052CDB045C70 /* ScanFlowView.swift */; };
+		C8416E4C2FA0EDA4A4979380 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBB808CAC19AF109E2AD1 /* StatsView.swift */; };
+		542DEF112939FF745284E20C /* VehicleLookupWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC18FA1FCB2C37739AA5804 /* VehicleLookupWebView.swift */; };
+		95F893ABF8DE2704294E63B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9788A1872451B15183194D45 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		528CB29BD4302054A52FAE18 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter.swift"; sourceTree = "<group>"; };
+		DF09A305956E3C2025D5CD76 /* AutoDexChileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AutoDexChileApp.swift"; sourceTree = "<group>"; };
+		25400ABEB618C2C9C92FBF96 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
+		6A2DCDE7BEDACF20D259EA41 /* AppStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStats.swift"; sourceTree = "<group>"; };
+		386BA96C551C358EF0C3CEC8 /* CarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarEntry.swift"; sourceTree = "<group>"; };
+		ABB7770414E2AAA578CC0A30 /* OCRResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRResult.swift"; sourceTree = "<group>"; };
+		93324CAD31E11C3794AE35F4 /* ScanDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanDraft.swift"; sourceTree = "<group>"; };
+		1A09C70E8AEFF459F823D8C3 /* VehicleLookupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VehicleLookupResult.swift"; sourceTree = "<group>"; };
+		E6AA16D140D23D94C6532ADC /* InventoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryRepository.swift"; sourceTree = "<group>"; };
+		943B60DDAE9983E7736D0132 /* AchievementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementService.swift"; sourceTree = "<group>"; };
+		438E9DCB7C7963613E0E22DC /* ManualVehicleLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualVehicleLookupService.swift"; sourceTree = "<group>"; };
+		E630E7B1CC3D7A7EFF977554 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRService.swift"; sourceTree = "<group>"; };
+		C9B2D98CA6A94EDC466FF204 /* RarityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RarityService.swift"; sourceTree = "<group>"; };
+		8EDE36DE53D53880F5B0A72F /* VehicleLookupProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VehicleLookupProviding.swift"; sourceTree = "<group>"; };
+		8CEE090F4E77BFD64DB9DAB6 /* WebVehicleLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebVehicleLookupService.swift"; sourceTree = "<group>"; };
+		6E2D01DA4485B8201CCEF656 /* ChilePlateNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChilePlateNormalizer.swift"; sourceTree = "<group>"; };
+		EAE8B7AF1F0BDE826612EE25 /* ChilePlateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChilePlateValidator.swift"; sourceTree = "<group>"; };
+		B8E2D2F512B3167D9C339568 /* ImageStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageStorageHelper.swift"; sourceTree = "<group>"; };
+		9CB46425F8BC84DA7250E7C6 /* CarDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarDetailViewModel.swift"; sourceTree = "<group>"; };
+		4DD251386A06AAD4900F493A /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewModel.swift"; sourceTree = "<group>"; };
+		E0CBDDEF909E5791FB88C781 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel.swift"; sourceTree = "<group>"; };
+		7456ABFF24225EB52A8CDDEF /* LookupResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LookupResultViewModel.swift"; sourceTree = "<group>"; };
+		BB9B8ABE660EF289A84BE22B /* PlateReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlateReviewViewModel.swift"; sourceTree = "<group>"; };
+		F8FDF9AA22212C4F6C814495 /* ScanFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanFlowViewModel.swift"; sourceTree = "<group>"; };
+		89AF1246A1A6B7FC9DD90315 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsViewModel.swift"; sourceTree = "<group>"; };
+		9167AA5C641CE37BFEA88450 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarDetailView.swift"; sourceTree = "<group>"; };
+		E270F7D8B6EEE15ED7E279A6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView.swift"; sourceTree = "<group>"; };
+		CDE6F3F99E6F47D5B44CDA57 /* CarCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components/CarCardView.swift"; sourceTree = "<group>"; };
+		12B9001A42D1EFEBF28FAF73 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components/ImagePickerView.swift"; sourceTree = "<group>"; };
+		205C8FFBB640F7D563AEE23A /* EditCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditCarView.swift"; sourceTree = "<group>"; };
+		9E8D8AE8B0DA9986A802FD5C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView.swift"; sourceTree = "<group>"; };
+		6B84E0494383871A053893B9 /* LookupResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LookupResultView.swift"; sourceTree = "<group>"; };
+		7BE11A61AC9F5E39E521EB46 /* ManualEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualEntryView.swift"; sourceTree = "<group>"; };
+		D4BE044C6CDC7398263E1969 /* PlateReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlateReviewView.swift"; sourceTree = "<group>"; };
+		91583A1774B9052CDB045C70 /* ScanFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanFlowView.swift"; sourceTree = "<group>"; };
+		FA7EBB808CAC19AF109E2AD1 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsView.swift"; sourceTree = "<group>"; };
+		6FC18FA1FCB2C37739AA5804 /* VehicleLookupWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VehicleLookupWebView.swift"; sourceTree = "<group>"; };
+		9788A1872451B15183194D45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2678F494CC29BA8E2F0C4643 /* AutoDexChile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDexChile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20307C7862C63A53C3D9C2BF /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A85897F1A32FE9B91C081CD = {isa = PBXGroup; children = (
+			77C037C483DC6B00C463C5F9 /* App */,
+			BC8E6A5FDB0FEE50AF1B10E7 /* Models */,
+			FA1196890D421541891D17B1 /* Services */,
+			EDDBA403083EBE7628B8511C /* Repositories */,
+			FD300FCC63CD372F91EB5F83 /* Utilities */,
+			F3533A2279EAD65233E99B38 /* ViewModels */,
+			F867080DDDCAA8CC74A91BE2 /* Views */,
+			9084F78E0875CD25E13BC0B0 /* Web */,
+			9788A1872451B15183194D45 /* Assets.xcassets */,
+			B88D7E26791946AEFDCC8BB7 /* Products */,
+		); sourceTree = "<group>"; };
+		B88D7E26791946AEFDCC8BB7 /* Products */ = {isa = PBXGroup; children = (2678F494CC29BA8E2F0C4643 /* AutoDexChile.app */,); name = Products; sourceTree = "<group>"; };
+		77C037C483DC6B00C463C5F9 /* App */ = {isa = PBXGroup; children = (
+			528CB29BD4302054A52FAE18 /* AppRouter.swift */,
+			DF09A305956E3C2025D5CD76 /* AutoDexChileApp.swift */,
+		); path = App; sourceTree = "<group>"; };
+		BC8E6A5FDB0FEE50AF1B10E7 /* Models */ = {isa = PBXGroup; children = (
+			25400ABEB618C2C9C92FBF96 /* Achievement.swift */,
+			6A2DCDE7BEDACF20D259EA41 /* AppStats.swift */,
+			386BA96C551C358EF0C3CEC8 /* CarEntry.swift */,
+			ABB7770414E2AAA578CC0A30 /* OCRResult.swift */,
+			93324CAD31E11C3794AE35F4 /* ScanDraft.swift */,
+			1A09C70E8AEFF459F823D8C3 /* VehicleLookupResult.swift */,
+		); path = Models; sourceTree = "<group>"; };
+		FA1196890D421541891D17B1 /* Services */ = {isa = PBXGroup; children = (
+			943B60DDAE9983E7736D0132 /* AchievementService.swift */,
+			438E9DCB7C7963613E0E22DC /* ManualVehicleLookupService.swift */,
+			E630E7B1CC3D7A7EFF977554 /* OCRService.swift */,
+			C9B2D98CA6A94EDC466FF204 /* RarityService.swift */,
+			8EDE36DE53D53880F5B0A72F /* VehicleLookupProviding.swift */,
+			8CEE090F4E77BFD64DB9DAB6 /* WebVehicleLookupService.swift */,
+		); path = Services; sourceTree = "<group>"; };
+		EDDBA403083EBE7628B8511C /* Repositories */ = {isa = PBXGroup; children = (
+			E6AA16D140D23D94C6532ADC /* InventoryRepository.swift */,
+		); path = Repositories; sourceTree = "<group>"; };
+		FD300FCC63CD372F91EB5F83 /* Utilities */ = {isa = PBXGroup; children = (
+			6E2D01DA4485B8201CCEF656 /* ChilePlateNormalizer.swift */,
+			EAE8B7AF1F0BDE826612EE25 /* ChilePlateValidator.swift */,
+			B8E2D2F512B3167D9C339568 /* ImageStorageHelper.swift */,
+		); path = Utilities; sourceTree = "<group>"; };
+		F3533A2279EAD65233E99B38 /* ViewModels */ = {isa = PBXGroup; children = (
+			9CB46425F8BC84DA7250E7C6 /* CarDetailViewModel.swift */,
+			4DD251386A06AAD4900F493A /* CollectionViewModel.swift */,
+			E0CBDDEF909E5791FB88C781 /* HomeViewModel.swift */,
+			7456ABFF24225EB52A8CDDEF /* LookupResultViewModel.swift */,
+			BB9B8ABE660EF289A84BE22B /* PlateReviewViewModel.swift */,
+			F8FDF9AA22212C4F6C814495 /* ScanFlowViewModel.swift */,
+			89AF1246A1A6B7FC9DD90315 /* StatsViewModel.swift */,
+		); path = ViewModels; sourceTree = "<group>"; };
+		F867080DDDCAA8CC74A91BE2 /* Views */ = {isa = PBXGroup; children = (
+			9167AA5C641CE37BFEA88450 /* CarDetailView.swift */,
+			E270F7D8B6EEE15ED7E279A6 /* CollectionView.swift */,
+			CDE6F3F99E6F47D5B44CDA57 /* CarCardView.swift */,
+			12B9001A42D1EFEBF28FAF73 /* ImagePickerView.swift */,
+			205C8FFBB640F7D563AEE23A /* EditCarView.swift */,
+			9E8D8AE8B0DA9986A802FD5C /* HomeView.swift */,
+			6B84E0494383871A053893B9 /* LookupResultView.swift */,
+			7BE11A61AC9F5E39E521EB46 /* ManualEntryView.swift */,
+			D4BE044C6CDC7398263E1969 /* PlateReviewView.swift */,
+			91583A1774B9052CDB045C70 /* ScanFlowView.swift */,
+			FA7EBB808CAC19AF109E2AD1 /* StatsView.swift */,
+		); path = Views; sourceTree = "<group>"; };
+		9084F78E0875CD25E13BC0B0 /* Web */ = {isa = PBXGroup; children = (
+			6FC18FA1FCB2C37739AA5804 /* VehicleLookupWebView.swift */,
+		); path = Web; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		147982BEBBBCF1EA792C8730 /* AutoDexChile */ = {isa = PBXNativeTarget; buildConfigurationList = B35E887FCFD2AEF5B38E33C4 /* Build configuration list for PBXNativeTarget "AutoDexChile" */; buildPhases = (21EA22531D07CFB94E0E0E52 /* Sources */, 20307C7862C63A53C3D9C2BF /* Frameworks */, 3E4149F4CEEB2B45A1E83FF2 /* Resources */, ); buildRules = (); dependencies = (); name = AutoDexChile; productName = AutoDexChile; productReference = 2678F494CC29BA8E2F0C4643 /* AutoDexChile.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1781F676DEDF5767F3243DB0 /* Project object */ = {isa = PBXProject; attributes = {LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = {147982BEBBBCF1EA792C8730 = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = 8A330FEDBB779071B6A8A6C4 /* Build configuration list for PBXProject "AutoDexChile" */; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, ); mainGroup = 0A85897F1A32FE9B91C081CD; productRefGroup = B88D7E26791946AEFDCC8BB7 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (147982BEBBBCF1EA792C8730 /* AutoDexChile */, ); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E4149F4CEEB2B45A1E83FF2 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (95F893ABF8DE2704294E63B9 /* Assets.xcassets in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21EA22531D07CFB94E0E0E52 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+			1D8829CA9814F4467CCAEBBB /* AppRouter.swift in Sources */,
+			37088026487015FEC8E43673 /* AutoDexChileApp.swift in Sources */,
+			A5BE04B633CC85A463508062 /* Achievement.swift in Sources */,
+			0163EC906F7B7AB41E5D14F5 /* AppStats.swift in Sources */,
+			655422705FDC1289E8F07399 /* CarEntry.swift in Sources */,
+			3264DB44194EB5CA28130706 /* OCRResult.swift in Sources */,
+			AFE3F1D4E69A6E549C6E6FDD /* ScanDraft.swift in Sources */,
+			6650DFD645E591E75DE57FD3 /* VehicleLookupResult.swift in Sources */,
+			0CCCEB206681F64EA69A97B3 /* InventoryRepository.swift in Sources */,
+			F056289D0186D16C4FEE4B62 /* AchievementService.swift in Sources */,
+			D79D513272C31B3FFF470EE7 /* ManualVehicleLookupService.swift in Sources */,
+			EE153213C3B1942305280CBD /* OCRService.swift in Sources */,
+			AAB6BC2B4B86278F59CDBB64 /* RarityService.swift in Sources */,
+			CD6072AF0EFD75F8C1E8F9DF /* VehicleLookupProviding.swift in Sources */,
+			A15BDA92309B572D4FDF3DC4 /* WebVehicleLookupService.swift in Sources */,
+			233736D6105D635B8BCDE879 /* ChilePlateNormalizer.swift in Sources */,
+			054BDAE0E62A44BDB63A1972 /* ChilePlateValidator.swift in Sources */,
+			F3B9166D6E267B8372FF8606 /* ImageStorageHelper.swift in Sources */,
+			D1FEB8F5DF7DE09CE276BF56 /* CarDetailViewModel.swift in Sources */,
+			1BA1CD3C0C5CC97EE46533F2 /* CollectionViewModel.swift in Sources */,
+			E62FF235706BE30C750F1205 /* HomeViewModel.swift in Sources */,
+			83559B0C3AE5826F191419A1 /* LookupResultViewModel.swift in Sources */,
+			29AD0C1C9CAAFA7B45DFC30B /* PlateReviewViewModel.swift in Sources */,
+			6D19BDA565110848A41E5D29 /* ScanFlowViewModel.swift in Sources */,
+			7B7E5F5205BDE8C3C433935F /* StatsViewModel.swift in Sources */,
+			3EB703BA6C3E3B687E702087 /* CarDetailView.swift in Sources */,
+			7756C3681C4CBC12FCF3C140 /* CollectionView.swift in Sources */,
+			3712339A6E6B652EFD847D3F /* CarCardView.swift in Sources */,
+			52C159E9FC198BA737ED3B76 /* ImagePickerView.swift in Sources */,
+			D8FEAFD16E92AAC986D3C2AD /* EditCarView.swift in Sources */,
+			3D225D765AFFA2B599A7DD24 /* HomeView.swift in Sources */,
+			9B3D58AE73D0CEFD3ADE18B4 /* LookupResultView.swift in Sources */,
+			7BC07C44A712BF217724E0F7 /* ManualEntryView.swift in Sources */,
+			9271869BCB6303D15E47A96D /* PlateReviewView.swift in Sources */,
+			DE4E597CA1D44E07114081C9 /* ScanFlowView.swift in Sources */,
+			C8416E4C2FA0EDA4A4979380 /* StatsView.swift in Sources */,
+			542DEF112939FF745284E20C /* VehicleLookupWebView.swift in Sources */,
+		); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF0A65BA7807AF8DBEB72761 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		DD8D5369EB73B6CB6D4E1528 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		5618AF84EE72C52828521064 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_PREVIEWS = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.AutoDexChile; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; INFOPLIST_KEY_CFBundleDisplayName = AutoDexChile; }; name = Debug; };
+		89C140FC4BFB652CF841AFD2 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_PREVIEWS = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.AutoDexChile; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; INFOPLIST_KEY_CFBundleDisplayName = AutoDexChile; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A330FEDBB779071B6A8A6C4 /* Build configuration list for PBXProject "AutoDexChile" */ = {isa = XCConfigurationList; buildConfigurations = (AF0A65BA7807AF8DBEB72761 /* Debug */, DD8D5369EB73B6CB6D4E1528 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		B35E887FCFD2AEF5B38E33C4 /* Build configuration list for PBXNativeTarget "AutoDexChile" */ = {isa = XCConfigurationList; buildConfigurations = (5618AF84EE72C52828521064 /* Debug */, 89C140FC4BFB652CF841AFD2 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 1781F676DEDF5767F3243DB0 /* Project object */;
+}
